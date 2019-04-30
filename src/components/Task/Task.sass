@@ -1,0 +1,82 @@
+input[type="checkbox"] 
+	display: none
+	&:checked +label::before
+		content: "\2713"
+		color: green
+		text-align: center
+		font-weight: bolder
+		line-height: 35px
+		font-size: 23px
+	&:checked~.task 
+		text-decoration: line-through
+		color: slategray
+		text-decoration-color: lightslategray
+
+.item 
+	min-height: 80px
+	display: flex
+	align-items: center
+	justify-content: space-between
+	border-top: 1px dotted #84abb9
+
+label::before 
+	content: "\2713"
+	color: white
+	position: relative
+	width: 30px
+	height: 30px
+	background-color: white
+	display: inline-block
+	margin: 0 20px
+	border-radius: 100%
+	cursor: pointer
+	overflow: hidden
+
+.task 
+	font-family: Cocon-Regular
+	font-size: 11pt
+	flex-grow: 5
+	word-break: break-word
+	text-align: justify
+	border-radius: 50px
+	width: 330px
+	height: auto
+	border: 1px #646fa6 solid
+	border-radius: 10px
+	margin: 10px 0
+	background-color: #0f21296e
+	color: #c3c0c0
+	resize: none
+	overflow: hidden
+	outline: none
+	&:read-only
+		background-color: transparent
+		border: 0px
+		border-radius: 0
+
+
+.deleteImg
+	display: block
+	height: 14px
+	width: 14px
+	background-size: 14px
+
+
+.deleteImgHov
+	@extend .deleteImg
+	display: none
+
+
+.itemMenuDelete
+	opacity: 0
+	margin: auto 10px
+	background-color: #28475e
+	border: none
+	cursor: pointer
+	outline: none
+	.item:hover > &
+		opacity: 1
+	&:hover>.deleteImg
+		display: none
+	&:hover>.deleteImgHov
+		display: block
