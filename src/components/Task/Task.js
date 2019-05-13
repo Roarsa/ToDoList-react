@@ -14,6 +14,14 @@ class Task extends React.PureComponent {
       rename,
       checkChange,
     } = this.props;
+    /* TODO
+      давай вынесем вот это условие editId === item.id 
+      в props которые сверху приходят. назови ее как нибудь типо isEditing или че то такое
+      и здесь уже проверяй
+      так будет гораздо читабельней и понятней
+
+      плюс давай все это условие прямо в return(...) нет смысла его в отдельную переменную выносить
+    */
     const inputText = editId === item.id ? (
       <input
         className={styles.task}

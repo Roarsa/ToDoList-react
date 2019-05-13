@@ -10,6 +10,9 @@ import styles from './Logo.sass';
 class Logo extends React.PureComponent {
   render() {
     const { flagOfCompleted, complete, deleteAll } = this.props;
+    /* TODO
+      почему тут classnames не использузешь. в других местах жи используешь
+    */
     const classChecked = flagOfCompleted
       ? `${styles.checkedItems} ${styles.checkedItemsComplete}`
       : `${styles.checkedItems}`;
@@ -23,6 +26,9 @@ class Logo extends React.PureComponent {
           onClick={complete}
           onKeyDown={complete}
         >
+          {/* TODO
+            зачем тебе тут (и во многих местах) эти пробелы '{}'
+          */}
           {' '}
           <img alt="" className={styles.completeImg} src={completeAllimg} />{' '}
           <img alt="" className={styles.completeImgHov} src={completeAllimgHov} />{' '}

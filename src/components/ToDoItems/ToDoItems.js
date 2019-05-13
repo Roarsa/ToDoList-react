@@ -13,6 +13,9 @@ class ToDoItems extends React.PureComponent {
       deleteItem,
       rename,
     } = this.props;
+    /* TODO
+      itemLst - нормально нельзя писать а? :) 
+    */
     const itemLst = items.reverse().filter((item) => {
       return (
         type === 'all'

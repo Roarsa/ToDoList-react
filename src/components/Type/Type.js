@@ -6,6 +6,10 @@ import styles from './Type.sass';
 class Type extends React.PureComponent {
   render() {
     const { type, changeType } = this.props;
+    /* TODO
+      здесь лучше без переменных
+      давай сразу в render эти выражения прописывать
+    */
     const classAll = classNames(styles.type, {
       [styles.chosen]: type === 'all',
     });
@@ -20,6 +24,9 @@ class Type extends React.PureComponent {
         <button
           type="button"
           className={classAll}
+          /* TODO
+            можно ж без фигурных скобок. () => changeType('all)  
+          */
           onClick={() => {
             changeType('all');
           }}

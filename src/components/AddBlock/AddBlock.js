@@ -19,6 +19,10 @@ const AddBlock = ({ add }) => {
           className={styles.text}
           placeholder="I need to do..."
           value={value}
+          /* TODO
+            можно ж без фигурных скобок. () => setValue(event.target.value)
+            пройдись по коду у тебя во многих местах такая запись. исправь везде
+          */
           onChange={(event) => {
             setValue(event.target.value);
           }}
